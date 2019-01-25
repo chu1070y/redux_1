@@ -6,6 +6,12 @@ class ControllPanel extends Component{
     changeColor = (e) => {
         const codeValue = e.target.getAttribute("data-code");
         console.log(codeValue)
+
+        const actionData = {
+            color: codeValue
+        }
+        this.props.dispatch({type:"change", data:actionData})
+
     }
 
     render() {

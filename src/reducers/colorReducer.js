@@ -1,9 +1,14 @@
 
-const colorReducer = (state, action) => {
+const colorReducer = (state = {color:'AAA'}, action) => {
 
     console.log("colorReducer......")
+    console.log(action)
 
-    return state
+    if(action.data){
+        return action.data
+    }
+
+    return {color:'AAA'}
 }
 
 export default colorReducer
